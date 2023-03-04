@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- TAILWIND AND DAISY UI CDN LINK  -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.51.3/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- ICONS CDN LINK  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <title>Ai Universe website</title>
+  </head>
+
+  <body class="bg-slate-100 py-4">
+    <!-- ================HEADER START============= -->
+    <header class="w-full">
+      <div class="w-max mx-auto py-4">
+        <p class="capitalize text-2xl font-bold">ai universal hub</p>
+        <button class="btn btn-error mx-auto block my-3" id="sort">sort by date</button>
+      </div>
+    </header>
+    <!-- ================HEADER END============= -->
+
+    <!-- ================MAIN START============= -->
+    <main>
+      <!-- ================CARD START============= -->
+      <section>
+        <div
+          id="card__container"
+          class="container w-[90%] mx-auto grid justify-center items-center gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3"
+        ></div>
+      </section>
+      <!-- ================CARD END============= -->
+
+      <!-- ================MODAL END============= -->
+
+      <input type="checkbox" id="my-modal" class="modal-toggle" />
+      <div class="modal">
+        <div class="modal-box w-11/12 max-w-5xl relative">
+          <div id="modal__body" class="p-12"></div>
+
+          <div class="modal-action">
+            <label
+              for="my-modal"
+              class="fixed top-2 right-2 w-10 h-10 bg-rose-400 rounded-full grid place-content-center cursor-pointer text-white"
+            >
+              <i class="ri-close-line"></i>
+            </label>
+          </div>
+        </div>
+      </div>
+      <!-- ================MODAL END============= -->
+
+      <!-- ============================ LOADER ============================ -->
+      <div id="loading" class="flex justify-center items-center hidden">
+        <div class="w-5 h-5 rounded-full bg-blue-500 animate-bounce"></div>
+        <div class="ml-2 text-gray-700">Loading...</div>
+      </div>
+
+
+      <!-- ============================ SHOW MORT  BUTTON ============================ -->
+
+      <div class="contaner mx-auto w-[90%]">
+        <button id="show__more" class="my-4 btn btn-success block ml-auto">
+        Show all
+      </button>
+      </div>
+    </main>
+    <!-- ================MAIN END============= -->
+
+    <!-- js link  -->
+    <script src="./js/app.js"></script>
+  </body>
+</html>
